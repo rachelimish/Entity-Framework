@@ -4,7 +4,7 @@ using SampleOfUsingEF_DBFirst.Models;
 Console.WriteLine("Hello, World!");
 ShopContext contexts = new ShopContext();
 
-Customer newBook = new Customer() { Id = 1000, FirstName = "רחלי", LastName = "מישקובסקי", City= "רכסים", Country = "ישראל", Phone = "0548554002"};
+Customer newBook = new Customer() { Id = 1000, FirstName = "רחל", LastName = "מישקובסקי", City= "רכסים", Country = "ישראל", Phone = "0548554002"};
 var Cus = contexts.Customers.Single(b => b.City == "Berlin");
 //contexts.Remove(Cus);
 contexts.Add(newBook);
