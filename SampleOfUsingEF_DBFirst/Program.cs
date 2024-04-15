@@ -4,9 +4,10 @@ using SampleOfUsingEF_DBFirst.Models;
 Console.WriteLine("Hello, World!");
 ShopContext contexts = new ShopContext();
 
-//BooksDetail newBook = new BooksDetail() {Name = "ספר חדש", Id = 108, MaxAge = 80, MinAge= 8, NumberPages = 100, Price = 50};
+Customer newBook = new Customer() { Id = 1000, FirstName = "רחלי", LastName = "מישקובסקי", City= "רכסים", Country = "ישראל", Phone = "0548554002"};
 var Cus = contexts.Customers.Single(b => b.City == "Berlin");
-//book.MaxAge = 100;
+//contexts.Remove(Cus);
+contexts.Add(newBook);
 ChangeSpecificFeild(Cus, "City", "חיפה");
 contexts.SaveChanges();
 
